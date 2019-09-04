@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.changemanagement.TestCase_Dashbord">
+      <class name="com.datamato.tests.TestCase_Login">
         <methods>
-          <include name="beforeClass"/>
-          <include name="f"/>
           <include name="afterClass"/>
+          <include name="f"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.changemanagement.TestCase_Dashbord -->
+      </class> <!-- com.datamato.tests.TestCase_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

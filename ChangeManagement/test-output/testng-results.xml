@@ -2,24 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7549" started-at="2019-09-03T17:06:35 IST" finished-at="2019-09-03T17:06:42 IST">
+  <suite name="Default suite" duration-ms="2514" started-at="2019-09-04T10:40:07 IST" finished-at="2019-09-04T10:40:10 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7549" started-at="2019-09-03T17:06:35 IST" finished-at="2019-09-03T17:06:42 IST">
-      <class name="Tests.TestCase_Login">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:Tests.TestCase_Login@6e0e048a]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-09-03T17:06:35 IST" finished-at="2019-09-03T17:06:35 IST">
+    <test name="Default test" duration-ms="2514" started-at="2019-09-04T10:40:07 IST" finished-at="2019-09-04T10:40:10 IST">
+      <class name="com.datamato.tests.TestCase_Login">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.datamato.tests.TestCase_Login@2b552920]" name="Setup" is-config="true" duration-ms="6446" started-at="2019-09-04T10:40:01 IST" finished-at="2019-09-04T10:40:07 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:Tests.TestCase_Login@6e0e048a]" name="f" duration-ms="7502" started-at="2019-09-03T17:06:35 IST" finished-at="2019-09-03T17:06:42 IST">
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:com.datamato.tests.TestCase_Login@2b552920]" name="BeforeTest" is-config="true" duration-ms="0" started-at="2019-09-04T10:40:07 IST" finished-at="2019-09-04T10:40:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTest -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.datamato.tests.TestCase_Login@2b552920]" name="f" duration-ms="2469" started-at="2019-09-04T10:40:07 IST" finished-at="2019-09-04T10:40:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:Tests.TestCase_Login@6e0e048a]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-09-03T17:06:42 IST" finished-at="2019-09-03T17:06:42 IST">
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:com.datamato.tests.TestCase_Login@2b552920]" name="AfterTest" is-config="true" duration-ms="0" started-at="2019-09-04T10:40:10 IST" finished-at="2019-09-04T10:40:10 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- Tests.TestCase_Login -->
+        </test-method> <!-- AfterTest -->
+        <test-method status="PASS" signature="PostSuiteActions()[pri:0, instance:com.datamato.tests.TestCase_Login@2b552920]" name="PostSuiteActions" is-config="true" duration-ms="3320" started-at="2019-09-04T10:40:10 IST" finished-at="2019-09-04T10:40:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostSuiteActions -->
+      </class> <!-- com.datamato.tests.TestCase_Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
