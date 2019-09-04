@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.datamato.core.Driver;
 import com.datamato.core.Driverhelper;
-import com.datamato.helperclasses.ReadFromObjectPropertiesFile;
+import com.datamato.helperclasses.HelperClass;
 
 public class LoginPage extends Driverhelper{
 	static WebDriver driver;
@@ -28,22 +28,21 @@ public class LoginPage extends Driverhelper{
 	@FindBy(css=".form>button")
 	WebElement loginButton;
 	
-	ReadFromObjectPropertiesFile r;
-	
+		
 	public LoginPage() throws IOException {
 		//Driver d = new Driver();
 		driver = getDriver();
 		
 		PageFactory.initElements(driver,this);
-		r = new ReadFromObjectPropertiesFile();
-		
-		driver.get(ReadFromObjectPropertiesFile.getURL());
+			
+		driver.get(HelperClass.getObjectRepository().getProperty("loginUrl"));
 	}
 	
-	public Dashboard Login() 
+	public Dashboard Login() throws IOException 
 	{
-		username.sendKeys(ReadFromObjectPropertiesFile.getUsername());
-		password.sendKeys(ReadFromObjectPropertiesFile.getPassword());
+		
+		username.sendKeys(HelperClass.getObjectRepository().getProperty("username"));
+		password.sendKeys(HelperClass.getObjectRepository().getProperty("password"));
 		loginButton.click();
 		return new Dashboard(driver);
 	}

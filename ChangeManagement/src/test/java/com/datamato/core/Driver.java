@@ -6,18 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 public class Driver {
 	public static WebDriver driver;
 	
-	public static WebDriverWait wait;
+	private static WebDriverWait wait;
 	
-	public Driver()
-	{
-		init();
-	
-	}
-	
+		
 	public static void init()
 	{
 		File file = new File("resources//geckodriver.exe");
@@ -29,5 +28,33 @@ public class Driver {
 		
 	}
 	
+	public WebDriver getDriver()
+	{
+		return driver;
+	}
 	
+	@BeforeMethod
+	public void beforeTest()
+	{
+		System.out.println("-----------Starting Test-----------");
+	}
+	
+	@AfterMethod
+	public void afterTest()
+	{
+		System.out.println("-----------Stopping Test-----------");
+	}
+	
+	@BeforeSuite
+	public void setUp()
+	{
+		init();
+	}
+	
+	
+	@AfterSuite
+	public void postSuiteActions()
+	{
+		driver.quit();
+	}
 }

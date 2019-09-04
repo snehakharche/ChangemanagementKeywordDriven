@@ -2,28 +2,19 @@ package com.datamato.tests;
 
 import org.testng.annotations.Test;
 
+import com.datamato.core.Driverhelper;
 import com.datamato.pages.LoginPage;
-
-import org.testng.annotations.BeforeClass;
 
 import java.io.IOException;
 
-import org.testng.annotations.AfterClass;
 
-public class TestCase_Login {
-	LoginPage l;
+public class TestCase_Login extends Driverhelper{
+	
   @Test
   public void f() throws IOException {
 	  
-	  l = new LoginPage();
+	  LoginPage l = new LoginPage();
 	  l.Login();
   }
-  @BeforeClass
-  public void beforeClass() {
-  }
-
-  @AfterClass
-  public void afterClass() {
-  }
-
+  
 }

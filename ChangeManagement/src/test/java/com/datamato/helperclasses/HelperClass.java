@@ -5,14 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ReadFromObjectPropertiesFile {
+public class HelperClass {
 	 static Properties p= new Properties();
 	
-	public ReadFromObjectPropertiesFile() throws IOException
-	{
-		getObjectRepo();
-	}
-	public  Properties getObjectRepo() throws IOException
+	public static Properties getObjectRepository() throws IOException
 	{
 		File file = new File("resources\\object.properties");
 		FileReader r = new FileReader(file.getAbsolutePath());
@@ -21,19 +17,5 @@ public class ReadFromObjectPropertiesFile {
 		
 		return p;
 	}
-	public static String getUsername()
-	{
-		return p.getProperty("username");
-	}
-	
-	public static String getPassword()
-	{
-		return p.getProperty("password");
-	}
-	public static String getURL()
-	{
-		return p.getProperty("loginUrl");
-	}
-	
-	
+		
 }

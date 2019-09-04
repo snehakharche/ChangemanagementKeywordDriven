@@ -2,16 +2,13 @@ package com.datamato.core;
 
 import org.openqa.selenium.WebDriver;
 
+
 public class Driverhelper extends Driver{
-	static WebDriver driver;
+	protected WebDriver driver;
 	
 	public Driverhelper() {
-		super();
-		driver = Driver.driver;
+		
+		this.driver = super.driver;
 	}
 	
-	public WebDriver getDriver()
-	{
-		return driver;
-	}
 }
