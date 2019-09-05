@@ -1,6 +1,7 @@
 package com.datamato.core;
 
 import java.io.File;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,8 +18,9 @@ public class Driver {
 	private static WebDriverWait wait;
 	
 		
-	public static void init()
+	private void init()
 	{
+		
 		File file = new File("resources//geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
 		
@@ -28,21 +30,21 @@ public class Driver {
 		
 	}
 	
-	public WebDriver getDriver()
+	/*public WebDriver getDriver()
 	{
-		return driver;
-	}
+		return this.driver;
+	}*/
 	
 	@BeforeMethod
-	public void beforeTest()
+	public void beforeTest(Method method)
 	{
-		System.out.println("-----------Starting Test-----------");
+		System.out.println("-----------Starting Test - "+method.getName()+"-----------");
 	}
 	
 	@AfterMethod
-	public void afterTest()
+	public void afterTest(Method method)
 	{
-		System.out.println("-----------Stopping Test-----------");
+		System.out.println("-----------Stopping Test - "+method.getName()+"-----------");
 	}
 	
 	@BeforeSuite

@@ -8,7 +8,12 @@ public class Driverhelper extends Driver{
 	
 	public Driverhelper() {
 		
-		this.driver = super.driver;
+		driver = super.driver;
 	}
 	
+	
+	public WebDriver getDriver()
+	{
+		return this.driver;
+	}
 }

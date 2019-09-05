@@ -28,24 +28,33 @@ public class LoginPage extends Driverhelper{
 	@FindBy(css=".form>button")
 	WebElement loginButton;
 	
+	@CacheLookup
+	@FindBy(xpath="//a/span[contains(text(),'Sneha')]")
+	WebElement user;
 		
 	public LoginPage() throws IOException {
 		//Driver d = new Driver();
-		driver = getDriver();
+		
+		driver = super.getDriver();
 		
 		PageFactory.initElements(driver,this);
 			
 		driver.get(HelperClass.getObjectRepository().getProperty("loginUrl"));
 	}
 	
-	public Dashboard Login() throws IOException 
+	public Dashboard Login(String user,String pass) throws IOException 
 	{
+		username.sendKeys(user);
+		password.sendKeys(pass);
 		
-		username.sendKeys(HelperClass.getObjectRepository().getProperty("username"));
-		password.sendKeys(HelperClass.getObjectRepository().getProperty("password"));
 		loginButton.click();
 		return new Dashboard(driver);
 	}
 	
-	 
+	 public String getUser()
+	 {
+		 String name = user.getText();
+		 System.out.println("name: "+name);
+		 return name;
+	 }
 }
